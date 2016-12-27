@@ -6,7 +6,7 @@ Useful when you want to cache some files into a directory-this handles cleaning 
 ## usage
 
 ```javascript
-import kis from 'keep-it-simple'
+import kis from 'keep-it-small'
 
 kis('./my-awesome-cache', '3kb').then((cache) => {
   cache.write('1', 'file content')
