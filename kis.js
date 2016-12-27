@@ -90,7 +90,6 @@ module.exports = co.wrap(function *(dirPath, size) {
 
       const sizeWithNewFile = size + stats.totalInBytes - existingFileSize
       removeSomeIfNeeded(sizeWithNewFile)
-      // TODO remove if exists
       yield fs.writeFile(path.join(dirPath, fileName), content)
       debug('written', fileName)
       stats.items.push({
@@ -112,7 +111,7 @@ module.exports = co.wrap(function *(dirPath, size) {
 
       const sizeWithNewFile = size + stats.totalInBytes - existingFileSize
       removeSomeIfNeeded(sizeWithNewFile)
-      // TODO remove if exists
+
       fs.writeFileSync(path.join(dirPath, fileName), content)
       debug('written', fileName)
       stats.items.push({
